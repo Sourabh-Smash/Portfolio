@@ -4,7 +4,7 @@ const SocialHandlesBox = ({classDetail}) => {
   return (
     <li>
       <a href="#">
-        <l className={classDetail}></l>
+        <i className={classDetail}></i>
       </a>
     </li>
   );
