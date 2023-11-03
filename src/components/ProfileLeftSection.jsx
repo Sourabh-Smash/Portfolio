@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import profile from '../images/tree.jpg';
 
 const ProfileLeftSection = () => {
-  const skills = ["JavaScript Developer", "C++ Developer","Software Developer"];
+  const skills = ["JavaScript Developer","FrontEnd  Developer","Software  Developer"];
   const [skillidx, setSkillidx] = useState(0);
   useEffect(() => {
     const interval=setInterval(() => {
@@ -13,6 +13,9 @@ const ProfileLeftSection = () => {
     }
   }, [])
   const skill = skills[skillidx];
+  // const progressBarWidth = (skill.length / Math.max(...skills.map((s) => s.length))) * 100;
+  // const progressBarWidth = (skill.length / skills[0].length) * 100;
+  const progressBarWidth = ((Date.now() % 3000) / 3000) * 100;
   return (
     <div className="left">
       <div className="avatar_block">
@@ -26,8 +29,7 @@ const ProfileLeftSection = () => {
         <p className="cd-headline loading-bar">
           <span className="cd-words-wrapper">
             <b className="is-visible">{skill}</b>
-            {/* <b>JavaScript Developer</b>
-            <b>C++ Developer</b> */}
+        <div className="progress-bar" style={{ width: `${progressBarWidth}%` }}></div>
           </span>
         </p>
       </div>
