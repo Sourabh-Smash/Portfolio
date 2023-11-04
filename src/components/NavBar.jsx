@@ -10,7 +10,7 @@ const NavBar = () => {
               </div>
               <button>
                   <i className="uil uil-print"></i>
-                  Print
+                  Download
               </button>
           </div>
    </nav>
