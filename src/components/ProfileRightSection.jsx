@@ -19,9 +19,9 @@ const ProfileRightSection = () => {
       </ul>
 
       <ul className="socials">
-        <SocialHandlesBox classDetail="uil uil-facebook" />
+        <SocialHandlesBox classDetail="uil uil-github" />
         <SocialHandlesBox classDetail="uil uil-twitter" />
-        <SocialHandlesBox classDetail="uil uil-dribbble" />
+        <SocialHandlesBox classDetail="uil uil-linkedin" />
       </ul>
     </div>
   );
