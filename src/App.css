@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 
 :root {
+  /* --primary: #4971cf; */
   --primary: #1a253f;
   --dark: #151a33;
   --secondary: #2b55cc;
@@ -126,7 +127,7 @@ section.profile .left .avatar_block span {
   height: 5px;
   background: linear-gradient(to right,var(--secondary),var(--success));
   /* animation: progressBar 3s linear infinite; */
-  animation: progressBar 3s ease-in infinite;
+  animation: progressBar 2s ease-in infinite;
   border-radius: 4px;
   margin-top:.3rem;
 }
@@ -178,4 +179,29 @@ section.profile .right ul.socials li:nth-child(2) a{
 }
 section.profile .right ul.socials li:nth-child(3) a{
   background: var(--dribble);
+}
+
+.section_heading{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--pure);
+  margin-bottom: 3rem;
+  text-shadow: 0 0 1px rgba(40, 54, 95, 0.1);
+  position: relative;
+}
+section{
+  padding: 3rem;
+}
+
+main{
+  background: var(--primary);
+}
+.section_heading:after{
+  content: '';
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  border: 1px dotted var(--danger);
 }

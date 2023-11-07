@@ -7,7 +7,7 @@ const ProfileLeftSection = () => {
   useEffect(() => {
     const interval=setInterval(() => {
       setSkillidx((prev) => (prev + 1) % skills.length);
-    }, 3000);
+    },2000);
     return () => {
       clearInterval(interval);
     }
@@ -15,7 +15,7 @@ const ProfileLeftSection = () => {
   const skill = skills[skillidx];
   // const progressBarWidth = (skill.length / Math.max(...skills.map((s) => s.length))) * 100;
   // const progressBarWidth = (skill.length / skills[0].length) * 100;
-  const progressBarWidth = ((Date.now() % 3000) / 3000) * 100;
+  const progressBarWidth = ((Date.now() % 2000) / 2000) * 100;
   return (
     <div className="left">
       <div className="avatar_block">

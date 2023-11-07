@@ -1,15 +1,17 @@
 import React from 'react'
 import ProfileLeftSection from './ProfileLeftSection';
 import ProfileRightSection from './ProfileRightSection';
+import PersonalDetails from './PersonalDetails';
 
 const PersonalInformation = () => {
   return (
-    <div className="container">
-      <section className="profile"> 
+    <main className="container">
+      <section className="profile">
         <ProfileLeftSection />
-        <ProfileRightSection/>
+        <ProfileRightSection />
       </section>
-    </div>
+      <PersonalDetails />
+    </main>
   );
 }
 
