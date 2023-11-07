@@ -2,7 +2,7 @@ import React from 'react'
 import ProfileLeftSection from './ProfileLeftSection';
 import ProfileRightSection from './ProfileRightSection';
 
-const MainBox = () => {
+const PersonalInformation = () => {
   return (
     <div className="container">
       <section className="profile"> 
@@ -13,4 +13,4 @@ const MainBox = () => {
   );
 }
 
-export default MainBox;
+export default PersonalInformation;

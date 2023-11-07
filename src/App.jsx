@@ -1,15 +1,15 @@
 import './App.css'
 import NavBar from './components/NavBar'
-import MainBox from './components/MainBox'
+import PersonalInformation from './components/PersonalInformation'
 
 function App() {
 
   return (
     <>
       <NavBar />
-      <MainBox />
+      <PersonalInformation />
     </>
-  )
+  );
 }
 
 export default App
