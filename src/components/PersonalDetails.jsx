@@ -34,7 +34,7 @@ const PersonalDetails = () => {
           </p>
           <p>
             <span>Interest</span>
-            <span>club play football</span>
+            <span>Music, Reading, Travel</span>
           </p>
         </div>
       </div>
