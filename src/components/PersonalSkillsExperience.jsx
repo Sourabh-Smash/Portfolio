@@ -1,4 +1,7 @@
 import React from "react";
+import EducationWrapper from "./EducationWrapper";
+import EducationHeading from "./EducationHeading";
+import SkillBox from "./SkillBox";
 
 const PersonalSkillsExperience = () => {
   return (
@@ -7,51 +10,32 @@ const PersonalSkillsExperience = () => {
       <div className="content">
         <div className="left">
           <div className="inner_left">
-            <div className="heading">
-              <i className="uil uil-graduation-cap"></i>
-              <h5>Education</h5>
-            </div>
-            <div className="timeline_wrapper">
-              <div className="item">
-                <p>2000-2004</p>
-                <p className="center">HighSchool</p>
-                <p>Bacholer in Computer & Science</p>
-              </div>
-              <div className="item">
-                <p>2000-2004</p>
-                <p className="center">University</p>
-                <p>Bacholer in Computer & Science</p>
-              </div>
-              <div className="item">
-                <p>2000-2004</p>
-                <p className="center">University</p>
-                <p>Bacholer in Computer & Science</p>
-              </div>
-            </div>
+            <EducationHeading
+              logoClass="uil uil-graduation-cap"
+              info="Education"
+            />
+            <EducationWrapper />
           </div>
           <div className="inner_right">
-            <div className="heading">
-              <i className="uil uil-suitcase-alt"></i>
-              <h5>Experience</h5>
-            </div>
-            <div className="item">
-              <p>2000-2004</p>
-              <p className="center">HighSchool</p>
-              <p>Bacholer in Computer & Science</p>
-            </div>
-            <div className="item">
-              <p>2000-2004</p>
-              <p className="center">University</p>
-              <p>Bacholer in Computer & Science</p>
-            </div>
-            <div className="item">
-              <p>2000-2004</p>
-              <p className="center">University</p>
-              <p>Bacholer in Computer & Science</p>
-            </div>
+            <EducationHeading
+              logoClass="uil uil-suitcase-alt"
+              info="Experience"
+            />
+            <EducationWrapper />
           </div>
         </div>
-        <div className="right">right</div>
+        <div className="right">
+          <div className="skills_wrapper">
+            <SkillBox skill="React" dataAttr="80" level="80%" />
+            <SkillBox skill="HTML & CSS3" dataAttr="78" level="78%" />
+            <SkillBox
+              skill="Data Structure & Algorithms"
+              dataAttr="60"
+              level="60%"
+            />
+            <SkillBox skill="JavaScript" dataAttr="70" level="70%" />
+          </div>
+        </div>
       </div>
     </section>
   );

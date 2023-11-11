@@ -1,4 +1,5 @@
 import React from "react";
+import PersonalDetailInfo from "./PersonalDetailInfo";
 
 const PersonalDetails = () => {
   return (
@@ -16,26 +17,11 @@ const PersonalDetails = () => {
           <button>Download CV</button>
         </div>
         <div className="right">
-          <p>
-            <span>Name</span>
-            <span>Sourabh Manawat</span>
-          </p>
-          <p>
-            <span>Date Of Birth</span>
-            <span>28 May 2000</span>
-          </p>
-          <p>
-            <span>Spoken Language</span>
-            <span>Hindi - English</span>
-          </p>
-          <p>
-            <span>Nationality</span>
-            <span>Bharat</span>
-          </p>
-          <p>
-            <span>Interest</span>
-            <span>Music, Reading, Travel</span>
-          </p>
+          <PersonalDetailInfo info1="Name" info2="Sourabh Manawat" />
+          <PersonalDetailInfo info1="Date Of Birth" info2="28 May 2000" />
+          <PersonalDetailInfo info1="Spoken Language" info2="Hindi - English" />
+          <PersonalDetailInfo info1="Nationality" info2="Bharat" />
+          <PersonalDetailInfo info1="Interest" info2="Music, Reading, Travel" />
         </div>
       </div>
     </section>
