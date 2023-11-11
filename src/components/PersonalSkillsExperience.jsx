@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import EducationWrapper from "./EducationWrapper";
 import EducationHeading from "./EducationHeading";
 import SkillBox from "./SkillBox";
 
-const PersonalSkillsExperience = () => {
+const PersonalSkillsExperience = () => {  
   return (
     <section className="skills">
       <h1 className="section_heading">Education & Skills</h1>
@@ -26,14 +26,14 @@ const PersonalSkillsExperience = () => {
         </div>
         <div className="right">
           <div className="skills_wrapper">
-            <SkillBox skill="React" dataAttr="80" level="80%" />
-            <SkillBox skill="HTML & CSS3" dataAttr="78" level="78%" />
+            <SkillBox skill="React" dataAttr="80" level="80" />
+            <SkillBox skill="HTML & CSS3" dataAttr="78" level="78" />
             <SkillBox
               skill="Data Structure & Algorithms"
               dataAttr="60"
-              level="60%"
+              level="60"
             />
-            <SkillBox skill="JavaScript" dataAttr="70" level="70%" />
+            <SkillBox skill="JavaScript" dataAttr="70" level="70" />
           </div>
         </div>
       </div>
