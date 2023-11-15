@@ -3,6 +3,7 @@ import ProfileLeftSection from './ProfileLeftSection';
 import ProfileRightSection from './ProfileRightSection';
 import PersonalDetails from './PersonalDetails';
 import PersonalSkillsExperience from './PersonalSkillsExperience';
+import CowndownSection from './CowndownSection';
 
 const PersonalInformation = () => {
   return (
@@ -12,7 +13,8 @@ const PersonalInformation = () => {
         <ProfileRightSection />
       </section>
       <PersonalDetails />
-      <PersonalSkillsExperience/>
+      <PersonalSkillsExperience />
+      <CowndownSection/>
     </main>
   );
 }
