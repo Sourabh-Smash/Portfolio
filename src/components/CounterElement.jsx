@@ -1,26 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const CounterElement = ({ elem, info, dataVal, classProperty }) => {
   const [counter, setCounter] = useState(0);
-    useEffect(() => {
-      let step=+dataVal/100;
-      const interval = setInterval(() => {
-          let val = +dataVal;
-          console.log(counter)
-        if (counter < val) {
-          setCounter((prevCounter) => prevCounter + Math.ceil(step));
-        } else {
-          clearInterval(interval);
+
+  const targetRef = useRef(null);
+    let options = {
+      rootMargin: '0px 0px -100px 0px'
+    }
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("in view");
+
+          let step = +dataVal / 100;
+          const interval = setInterval(() => {
+            let val = +dataVal;
+            setCounter((prevCounter) => {
+              // Use the functional form to update counter based on the previous value
+              if (prevCounter < val) {
+                return prevCounter + Math.ceil(step);
+              } else {
+                clearInterval(interval);
+                return prevCounter;
+              }
+            });
+          }, 1);
         }
-      }, 1);
+      });
+    }, options);
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
 
     return () => {
-      clearInterval(interval);  
+      observer.disconnect();
     };
   }, [counter]);
 
   return (
-    <div>
+    <div ref={targetRef}>
       <div>
         <i className={classProperty}></i>
       </div>
