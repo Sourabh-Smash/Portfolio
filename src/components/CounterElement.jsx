@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CounterElement = ({ elem, info, dataVal, classProperty }) => {
+  const [counter, setCounter] = useState(0);
+    useEffect(() => {
+      let step=+dataVal/100;
+      const interval = setInterval(() => {
+          let val = +dataVal;
+          console.log(counter)
+        if (counter < val) {
+          setCounter((prevCounter) => prevCounter + Math.ceil(step));
+        } else {
+          clearInterval(interval);
+        }
+      }, 1);
+
+    return () => {
+      clearInterval(interval);  
+    };
+  }, [counter]);
+
   return (
     <div>
       <div>
@@ -9,7 +27,7 @@ const CounterElement = ({ elem, info, dataVal, classProperty }) => {
       <div>
         <h3>
           <span className="counter" data-count={dataVal}>
-            {dataVal}
+            {counter}
           </span>
           {elem}
         </h3>
