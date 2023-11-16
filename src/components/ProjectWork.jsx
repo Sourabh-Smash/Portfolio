@@ -2,6 +2,7 @@ import React from "react";
 import img from "../images/tree.jpg";
 import ProjectTech from "./ProjectTech";
 import ProjectImgs from "./ProjectImgs";
+import TechHeadings from "./TechHeadings";
 
 const ProjectWork = () => {
   return (
@@ -10,14 +11,8 @@ const ProjectWork = () => {
       <div className="wrapper">
         <div className="slider">slider</div>
         <div className="portfolio">
-          <div className="tabs">
-            <ul>
-              <ProjectTech activeClass="active" dataProp="*" tech="All" />
-              <ProjectTech dataProp=".design" tech="UI/UX Design" />
-              <ProjectTech dataProp=".frontend" tech="FrontEnd" />
-              <ProjectTech dataProp=".backend" tech="BackEnd" />
-            </ul>
-          </div>
+         
+          <TechHeadings />
           <div className="portfolio_wrapper">
             <ProjectImgs classinfo="item design" img={img} />
             <ProjectImgs classinfo="item frontend" img={img} />
