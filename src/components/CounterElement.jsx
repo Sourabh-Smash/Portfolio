@@ -5,7 +5,7 @@ const CounterElement = ({ elem, info, dataVal, classProperty }) => {
 
   const targetRef = useRef(null);
     let options = {
-      rootMargin: '0px 0px -100px 0px'
+      rootMargin: '0px 0px -150px 0px'
     }
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -25,7 +25,7 @@ const CounterElement = ({ elem, info, dataVal, classProperty }) => {
                 return prevCounter;
               }
             });
-          }, 1);
+          }, 2);
         }
       });
     }, options);

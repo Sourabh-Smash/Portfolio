@@ -4,6 +4,7 @@ import ProfileRightSection from './ProfileRightSection';
 import PersonalDetails from './PersonalDetails';
 import PersonalSkillsExperience from './PersonalSkillsExperience';
 import CowndownSection from './CowndownSection';
+import ProjectWork from './ProjectWork';
 
 const PersonalInformation = () => {
   return (
@@ -14,7 +15,8 @@ const PersonalInformation = () => {
       </section>
       <PersonalDetails />
       <PersonalSkillsExperience />
-      <CowndownSection/>
+      <CowndownSection />
+      <ProjectWork/>
     </main>
   );
 }
